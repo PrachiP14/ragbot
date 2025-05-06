@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from rag import RAGSystem
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Fixed PDF path and API key
 PDF_PATH = "Collage.pdf"
@@ -52,5 +52,5 @@ def api_chat():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True)

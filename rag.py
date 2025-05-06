@@ -85,9 +85,8 @@ def run_chatbot(pdf_path, api_key):
         except Exception as e:
             print(f"\nError: {str(e)}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # Set your PDF path and API key here
     PDF_PATH = "Collage.pdf"  # Change this to your PDF file path
     API_KEY = "AIzaSyCuSfm9NX-utxP7fnaINGmO8ibpPZOmT9o"  # Add your Google API key here
-    
-    run_chatbot(PDF_PATH, API_KEY)
+    run_chatbot(PDF_PATH, API_KEY)
